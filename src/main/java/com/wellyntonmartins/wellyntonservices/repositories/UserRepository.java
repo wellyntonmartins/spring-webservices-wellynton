@@ -3,6 +3,9 @@ package com.wellyntonmartins.wellyntonservices.repositories;
 import com.wellyntonmartins.wellyntonservices.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+// Aqui, o parametro "User" diz que e da entidade "User" no package entities, assim o JPA disponibiliza
+// metodos proprios para criar, buscar, atualizar, deletar dados na entidade enviada no parametro, caso
+// ela exista em entities e seja definida como uma entidade pro JPA
 public interface UserRepository extends JpaRepository<User, Long> {
 
 }

@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Profile;
 
 import java.util.Arrays;
 
-@Configuration
-@Profile("test")
+@Configuration // Anotacao que diz que essa classe e de configuracao do projeto
+@Profile("test") // Anotacao que diz o profile do projeto que vai aderir a estas configuracoes
 public class TestConfig implements CommandLineRunner {
 
     @Autowired
