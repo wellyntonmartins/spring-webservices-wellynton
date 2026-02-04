@@ -1,5 +1,6 @@
 package com.wellyntonmartins.wellyntonservices.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -13,6 +14,8 @@ public class Order implements Serializable {
     @Id // Define que o atributo abaixo e uma coluna de Id da entidade (primary key)
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Define que e um valor auto-generativo (auto_increment)
     private Long id;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant moment;
 
     @ManyToOne // Define que essa classe (Order) tem uma associacao de "muitos pra um" com a classe do atributo/objeto

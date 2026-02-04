@@ -1,5 +1,6 @@
 package com.wellyntonmartins.wellyntonservices.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -19,6 +20,7 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "client") // Diz que nessa associacao de OneToMany, essa classe (User) esta sendo mapeada em
     // Order pelo atributo/obejto de nome "client"
     private List<Order> orders = new ArrayList<>();
