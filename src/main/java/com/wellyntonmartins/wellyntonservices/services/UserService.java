@@ -1,7 +1,7 @@
 package com.wellyntonmartins.wellyntonservices.services;
 
-import com.wellyntonmartins.wellyntonservices.entities.User;
 import com.wellyntonmartins.wellyntonservices.repositories.UserRepository;
+import com.wellyntonmartins.wellyntonservices.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
